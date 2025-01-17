@@ -1,15 +1,15 @@
 ;(function($){
     $.fn.jqSearch = function (options) {	
         var defaults = {
-            TxtVal: "杈撳叆鍏抽敭璇嶆悳绱紒",
-            KeyTxt1: "杈撳叆鍏抽敭璇嶆悳绱紒",
-            KeyTxt2: "杈撳叆鐨勫叧閿瘝瀛楁暟涓嶈杩囧锛�",
-            KeyTxt3: "鎮ㄨ緭鍏ョ殑鍐呭瀛樺湪鐗规畩瀛楃锛�",
+            TxtVal: "11111",
+            KeyTxt1: "2222",
+            KeyTxt2: "3333",
+            KeyTxt3: "4444",
             KeyId: "topkey",
             KeyUrl: "#",
             OtherUrl: "",
             OtherParams: "",
-            OtherTxtVal: "璇烽€変腑绛涢€夋垨杈撳叆鍏抽敭璇嶆悳绱紒",
+            OtherTxtVal: "55555",
             KeyHref: "key",
             Static: false
         };
@@ -37,7 +37,6 @@
             function GoSearchUrl() {
                 var searchinput = document.getElementById(opts.KeyId);
                 var isNull = true;
-                //闈欐€�
                 var Staticlinks = opts.KeyUrl;
                 if (typeof (opts.OtherParams) == "function") {
                     var params = opts.OtherParams();
@@ -85,13 +84,11 @@
                 //}
                 if (!(searchinput.value == "" || searchinput.value == opts.TxtVal)) {
                     if (opts.Static) {
-                        //闈欐€�
                         Staticlinks = opts.KeyUrl;
                         Staticurl = "_" + opts.KeyHref + "_" + searchinput.value + ".html"
                         Staticlinks = Staticlinks.replace(".html", Staticurl);
                         window.location = Staticlinks;
                     } else {
-                        //鍔ㄦ€�
                         if (opts.KeyUrl.indexOf("?") == -1) {
                             window.location = opts.KeyUrl + "?" + opts.KeyHref + "=" + escape(searchinput.value);
     
@@ -126,7 +123,7 @@
             }
     
             function stripscript(s) {
-                var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~锛丂#锟モ€︹€�&*锛堬級&mdash;鈥攟{}銆愩€戔€橈紱锛氣€濃€�'銆傦紝銆侊紵]");
+                var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~]");
                 var rs = "";
                 for (var i = 0; i < s.length; i++) {
                     rs = rs + s.substr(i, 1).replace(pattern, '');
@@ -144,13 +141,12 @@
                         var param = parms[i].split("=");
                         if (param[0] == key) {
                             exsit = true;
-                            result += param[0] + "=" + value + "&"; //淇敼鍙傛暟
-                        } else {
-                            result += param[0] + "=" + param[1] + "&"; //淇濇寔鍘熸牱
+                            result += param[0] + "=" + value + "&";
+                            result += param[0] + "=" + param[1] + "&"; 
                         }
                     }
                     if (exsit == false) {
-                        result += key + "=" + value + "&"; //涓嶅瓨鍦ㄦ椂锛岄檮鍔犲弬鏁�
+                        result += key + "=" + value + "&"; 
                     }
     
                 } else {

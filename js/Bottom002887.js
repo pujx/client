@@ -2,10 +2,9 @@ var Bottom002887={
     main:function(){
         $(function ($) {
           $(window).on("resize", function (e) {
-               Bottom002887.aw(".Bottom002887 .b_nav nav",".item"); //绛夐棿璺�
+               Bottom002887.aw(".Bottom002887 .b_nav nav",".item"); 
           }).trigger("resize");
       });
-      //绉诲姩绔彍鍗�
         if($(window).width()<=640){
             Bottom002887.wap();
         }
@@ -44,3 +43,8 @@ var Bottom002887={
         })
     }
 }
+$(function() {
+	var year = new Date();
+	var footYear = year.getFullYear();
+	$(".footer-year").text(footYear);
+});

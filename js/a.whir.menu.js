@@ -1,18 +1,11 @@
 (function ($, plugin) {
 	var data = {}, id = 1, etid = plugin + 'ETID';
-	// 寤舵椂鏋勯€犲櫒
 	$.fn[plugin] = function (speed, group) {
 		id ++;	
 		group = group || this.data(etid) || id;
 		speed = speed || 200;
-		
-		// 缂撳瓨鍒嗙粍鍚嶇О鍒板厓绱�
 		if (group === id) this.data(etid, group);
-		
-		// 鏆傚瓨瀹樻柟鐨刪over鏂规硶
 		this._hover = this.hover;
-		
-		// 浼涓€涓猦over鍑芥暟锛屽苟鎴幏涓や釜鍥炶皟鍑芥暟浜ょ粰鐪熸鐨刪over鍑芥暟澶勭悊
 		this.hover = function (over, out) {
 			over = over || $.noop;
 			out = out || $.noop;
@@ -35,18 +28,14 @@
 		
 		return this;
 	};
-	// 鍐荤粨閫夊畾鍏冪礌鐨勫欢鏃跺櫒
 	$.fn[plugin + 'Pause'] = function () {
 		clearTimeout(this.data(etid));
 		return this;
 	};
-	// 闈欐€佹柟娉�
 	$[plugin] = {
-		// 鑾峰彇涓€涓敮涓€鍒嗙粍鍚嶇О
 		get: function () {
 			return id ++;
 		},
-		// 鍐荤粨鎸囧畾鍒嗙粍鐨勫欢鏃跺櫒
 		pause: function (group) {
 			clearTimeout(data[group]);
 		}
@@ -62,7 +51,6 @@
 			menuMoblie()
 			}           
 	}).trigger("resize");
-		//閫変腑
 	//$(".header-menu li").each(function(index) {
 //     	$(this).attr("id", "m" + index);
 //	});
@@ -71,7 +59,6 @@
 });
 
 function open_menu() {
-	//绉诲姩绔墦寮€鑿滃崟瀵艰埅
 	$("#open_menu").click(function(e) {
 		if ($(this).hasClass("open_menu_on")) {
 			$(this).removeClass("open_menu_on")
@@ -81,24 +68,17 @@ function open_menu() {
 			$("#header-menu").addClass("header-menu-show");
 		}
 	});
-	//绉诲姩绔墦寮€鑿滃崟瀵艰埅 end	
 	}
 function menu() {
 	var window_width = $(window).width();
 	var a = $(".header-menu")
 	var b = a.find("ul")
 	var c = b.find("li")
-	//瀵艰埅鎬诲搴�	
 	var m_total_width = b.width();
-	//鏍忕洰鎬绘暟
 	var m_num = c.length
-	//鏍忕洰瀹藉害px
 	var m_li_width = m_total_width / m_num
-	//鏍忕洰瀹藉害%
 	c.width(100 / m_num + "%");
-	//鍒ゆ柇鏄惁鏈変笅鎷� 鍔犱笂鏍峰紡has-sub
 	$(".header-menu li").each(function(index) {
-		//榧犳爣缁忚繃涓€绾ф爮鐩晥鏋�
 			$(this).bind("mouseover",function(e) {
 			$(this).addClass("hover aon");
 			$(this).siblings().removeClass("aon");
@@ -111,31 +91,27 @@ function menu() {
 		var sub_num = $(this).find(".sub").length
 		if (sub_num > 0) {
 			$(this).addClass("has-sub");
-			//涓嶅悓鐜鍒ゆ柇
 
 			var x = $(this)
 			var y = x.find(".sub")
 			var z = y.find(".sub-menu")
 			var r = z.find("dl")
 
-			//涓嬫媺鑳屾櫙涓嶅叏
 			if (a.hasClass("no-fullbground")) {
-				x.addClass("relative"); //鐩稿li瀹氫綅
-				$("body").css("overflow-x", "hidden"); //闃叉婊氬姩鏉″嚭鐜�
+				x.addClass("relative");
+				$("body").css("overflow-x", "hidden"); 
 				y.width(window_width);
 			}
-			//妯悜
 			if (a.hasClass("sub-horizontal")) {
-				var r_width = r.width() //浜岀骇瀵艰埅鍚勮嚜瀹藉害
-				var r_height = r.height() //浜岀骇瀵艰埅鍚勮嚜楂樺害
+				var r_width = r.width() 
+				var r_height = r.height() 
 				rigth_side = window_width - x.position().left - ((window_width - $(".header").width()) / 2)
 				left_side = x.position().left - ((window_width - $(".header").width()) / 2) + x.width()
 				//alert(rigth_side)
 
 				if (m_num - x.index() <= 3) {
-					if (r_width > rigth_side) { //浜岀骇瀵艰埅鎬诲搴︽瘮瀵艰埅鍙充晶瀹藉害澶х殑鏃跺€�
+					if (r_width > rigth_side) { 
 						y.addClass("sub-right");
-						//鍒ゆ柇鍙充晶瀹藉害澶ぇ鍔犱笂瀹藉害
 					//	if (r_width > left_side) {
 							r.width(left_side).height(r_height)
 						//	y.addClass("sub-right-txt-r");
@@ -150,43 +126,32 @@ function menu() {
 				}
 				//
 			}
-			//妯悜End
-			//涓嬫媺鑳屾櫙涓嶅叏END
-
-			//涓嬫媺鍏ㄨ儗鏅�
 			if (a.hasClass("fullbground")) {
 				y.show().width($(".header").width());
-				//alert(r.width())
 				var halfw=(window_width - $(".header").outerWidth()) / 2 
 			    leftw = r.width() / 2 - (x.outerWidth() / 2)
 				left_side = x.position().left - halfw
 				rigth_side = window_width - x.position().left - halfw - x.outerWidth()
-				aa=window_width-$(".header-menu").position().left-$(".header-menu").width()//鍒ゆ柇瀵艰埅鍙宠竟璺濈鏄惁绛変簬宸﹀彸璺濈锛堢瓑浜庡彸杈规湁鏃犲叾浠栨ā鍧楁尅鐫€锛�
-			    bb=window_width-x.position().left-halfw-x.outerWidth()//褰撳墠LI鍦ㄥ唴瀹�$(".header-menu")鍙宠竟璺濈
+				aa=window_width-$(".header-menu").position().left-$(".header-menu").width()
+			    bb=window_width-x.position().left-halfw-x.outerWidth()
 				
-				cc=x.position().left//褰撳墠LI鍦ㄥ唴瀹�$(".header-menu")宸﹁竟璺濈
+				cc=x.position().left
 				dd=cc-halfw
-					  //宸﹁竟
 						if (leftw > left_side) {
 							y.css({"left": -left_side});
 							} else {
 							y.css({"left": -leftw});
 						}
-					  //宸﹁竟 end				
-
-				//鍙宠竟
 				if(aa==halfw){
 					
 					if(leftw> rigth_side) {
 						y.css({"left": "auto","right":-bb});
 					}else{
-					  //宸﹁竟
 						if (leftw > left_side) {
 							y.css({"left": -left_side});
 							} else {
 							y.css({"left": -leftw});
 						}
-					  //宸﹁竟 end
 						}
 					
 					}else{
@@ -194,7 +159,7 @@ function menu() {
 					/**/				
 					if (m_num - x.index() <= 3) {
 					if (leftw > rigth_side) {
-						if (bb==0) { //瀵艰埅鑿滃崟鍙宠竟娌℃湁妯″潡
+						if (bb==0) { 
 							y.css({"left": "auto","right": -(rigth_side-halfw)});
 						}else{
 						y.css({"left": "auto","right": -rigth_side});
@@ -209,12 +174,10 @@ function menu() {
 						
 				}
 
-				//鍙宠竟 end
-
                // alert(r.width())
 				y.width(r.width()+1);
 				//
-				x.addClass("relative"); //鐩稿li瀹氫綅
+				x.addClass("relative");
 				x.hover(function() {
 					var e=$(this).index()
 					//$(".sub-menu-layer"+e).height(y.outerHeight());
@@ -224,9 +187,6 @@ function menu() {
 					$(".sub-menu-layer"+e).stop(true,true).slideUp(300);
 					});
 			}
-			//涓嬫媺鍏ㄨ儗鏅疎ND
-
-			//涓嶅悓鐜鍒ゆ柇End
 		}
 	});
 	
@@ -246,11 +206,9 @@ function menu() {
                 });
 		 
 		}
-	//涓嬫媺鑿滃崟鏄剧ず
 
 	$(".header-menu .has-sub").each(function() {
 
-		//涓嬫媺绔栧悜鍥炬枃 
 		if (a.hasClass("sub-vertical")) {
             var s_halfw=(window_width - $(".header").outerWidth()) / 2
 			var sub_width = $(this).find(".sub").outerWidth()
@@ -268,8 +226,6 @@ function menu() {
 			}
 
 		}
-		//涓嬫媺绔栧悜鍥炬枃 End	
-		//澶氱骇
 		$(this).find(".sub").find(".sub-menu").find("dl").find("dt").each(function() {
 			var n = $(this).find("dl").find("dt").length
 			if (n >= 1) {
@@ -287,7 +243,6 @@ function menu() {
 			$(this).removeClass("aon");
 		});
 		
-		/////////////////涓€绾�
 		//$(this).find(".sub").height("auto"); 
 
 		var subh=$(this).find(".sub").outerHeight()
@@ -305,7 +260,6 @@ function menu() {
 	});
 }
 
-	//涓嬫媺鑿滃崟鏄剧ずEnd		
 
 function menuMoblie() {
 	var html = $(".header-menu").html()
@@ -324,7 +278,6 @@ function menuMoblie() {
 			$(this).find("em").append("<i class='op'></i>");
 		}
 
-		//澶氱骇
 		$(this).find(".sub").find(".sub-menu").find("dl").find("dt").each(function() {
 			var n = $(this).find("dl").find("dt").length
 			if (n >= 1) {
@@ -334,7 +287,6 @@ function menuMoblie() {
 		});
 
 	});
-	//涓€绾ц彍鍗�	
 	$("#header-menu .has-sub em").bind("click", function() {
 		if ($(this).parent().hasClass("clickon")) {
 			$(this).parent().removeClass("clickon");
@@ -346,8 +298,6 @@ function menuMoblie() {
 			$(this).parent().siblings().removeClass("clickon");
 		}
 	});
-
-	//澶氱骇鑿滃崟
 	$("#header-menu .sub-has-sub i").bind("click", function() {
 		if ($(this).parent().hasClass("clickon")) {
 			$(this).parent().removeClass("clickon");
