@@ -161,7 +161,7 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 	.Floor002396{ padding-left: 15px; padding-right: 15px;}
 }
 .Floor002396 .box{ float: left; width: 50%; }
-.Floor002396 .box .box-con{}
+.Floor002396 .box .box-con{padding-bottom: 30px;}
 .Floor002396 .box .box-inner{ max-width: 721px;padding:0 9px 0 75px;}
 .Floor002396 .box .box-inner .page-title{text-align: left;font-size: 42px;margin-bottom: 55px;}
 .Floor002396 .box .box-inner .page-title::after{margin: 20px 0 0;}
@@ -187,7 +187,7 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
     margin-left: 3px;
     min-width: 80px;}
 .Floor002396 .box-why ul li span{ display: block; font-size: 16px; color: #313131; margin-top: 1px;}
-.Floor002396 .box-about .box-con{ margin-top: -75px; position: relative; z-index: 99; background: #fff;overflow: hidden;}
+.Floor002396 .box-about .box-con{ margin-top: -75px; position: relative;background: #fff;overflow: hidden;}
 .Floor002396 .box-about .box-con img{transition: all .5s;}
 .Floor002396 .box-about .box-con:hover img{transform: scale(1.01);}
 .Floor002396 .box-about .box-inner{ padding-top: 55px; padding-bottom: 55px;padding-right:51px;}
@@ -211,6 +211,7 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 	.Floor002396 .box-about ul li{ padding: 0 2%;}
 	.Floor002396 .box-about ul li dl{ width: 70px; height: 70px; padding: 10px 0;}
 	
+	.Floor002396 .box-about .box-con{ margin-top: 0;}
 }
 @media only screen and (max-width:991px ) {
 	.Floor002396 .box .bglogo{ height: 75px;}
@@ -223,7 +224,6 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 	.Floor002396 .box-about .box-inner{ padding-top: 15px;padding-bottom: 15px;}
 	.Floor002396 .box-about .Tit{ margin-left: 15px; margin-right: 15px;}
 	.Floor002396 .box-why{ padding-bottom: 10%; background-size: 15%;}
-	.Floor002396 .box-about .box-con{ margin-top: 0;}
 	.Floor002396 .box-about ul li dl{ width: 50px; height: 50px;}
 	.Floor002396 .box-about ul li img{ width: 28px;}
 	.Floor002396 .box-about ul li b{ padding-top: 0;}	
@@ -577,7 +577,7 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 .Floor003105 a:hover .more{background-color: #132f3d;color: #fff;border-color: #132f3d;}
 .Floor003105 a:hover .more:after{background-image: url(../images/Floor003105-icon-white.svg);}
 
-.Floor003105 .slider li .txt .tit{font-size: 30px;color: #313131;}
+.Floor003105 .slider li .txt .tit{font-size: 30px;color: #313131;font-weight: bold;}
 .Floor003105 .slider li .txt p{margin: 30px 0px;
     font-size: 16px;
     line-height: 1.5;
@@ -610,6 +610,7 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 .Floor003105 .slider li .txt{padding:0.5em 5%;}
 .Floor003105 .slick-arrow{bottom: 100%; margin-bottom: 0.3em; right: 5%;}
 .Floor003105 .slick-prev{background-color: #00ac6f;margin-right: 0.6em;}
+.Floor003105 .more{padding: 8px 30px;}
 }
 @media (max-width:480px) {
 .Floor003105 .slider li .txt .tit{font-size: 0.32em;}
