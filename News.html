@@ -102,8 +102,8 @@
       </div>
     </header>
     <script>
-      var m = '0';
-      $("#m0").addClass("aon");
+      var m = '16';
+      $("#16").addClass("aon");
       //选中
       // var m = "0" 公共部分时请把此移到每个模版里 相对栏目更改ID选中
       //搜索
@@ -135,6 +135,7 @@
         } else {
           $(".Top002490").removeClass("hover")
         }
+
         $(window).scroll(function () {
           var after = $(window).scrollTop();
           if (before < after) {
@@ -147,319 +148,38 @@
           }
         })
       })
-
     </script>
   </div>
   <!--top end-->
-  <div class="Banner002826">
-    <ul class="ul slider">
-      <!----------方法一&方法二 写法 ---------->
-      <li>
-        <a href='javascript:'>
-          <div class="info">
-            <div class="txt auto">
-              <h3>行业内专业的半导体设备与关键零部件生产商</h3>
-              <p>集研发、制造、销售于一体</p>
-            </div>
-          </div>
-          <img src="images/banner1.jpg" class="pc">
-          <img src="images/banner1.jpg" class="wap">
-        </a>
-      </li>
-      <li>
-        <a href='javascript:'>
-          <div class="info">
-            <div class="txt auto">
-              <h3>一家专门生产碳化硅搬运设备的企业</h3>
-              <p>XXXXXX</p>
-            </div>
-          </div>
-          <img src="images/banner2.jpg" class="pc"><img src="images/banner2.jpg" class="wap">
-        </a>
-      </li>
-      <li>
-        <a href='javascript:'>
-          <div class="info">
-            <div class="txt auto">
-              <h3>客户至上</h3>
-              <p>以客户需求为核心</p>
-            </div>
-          </div>
-          <img src="images/banner3.jpg" class="pc"><img src="images/banner3.jpg" class="wap">
-        </a>
-      </li>
-      <li>
-        <a href='javascript:'>
-          <div class="info">
-            <div class="txt auto">
-              <h3>20 年的经验，专注于碳化硅</h3>
-              <p></p>
-            </div>
-          </div>
-          <img src="images/banner4.jpg" class="pc">
-          <img src="images/banner4.jpg" class="wap">
-        </a>
-      </li>
-    </ul>
-    <script>
-      video.slick_one(".Banner002826", 0); 
-    </script>
-    <!--
-	  //方法1  video.slick_one(".Banner002826",0);    //移动端不带视频
-	  //方法2  video.slick_two(".Banner002826",1);     //移动端带上视频 需点击播放 不自动播放
-	   注：方法1 2 写法是固定的  0 1改变只作用于方法3
-	  //方法3  video.slick_three(".Banner002826",1); //视频直接循环播放  
-	  1:移动端保留点击再播放 
-	  0:移动端视频删除
-	  //方法4  video.slick_four(".Banner002826"); //点击播放 停止切换 播放完才继续切换
-	  注：方法4样式会不同 注意替换
-	  //方法5  video.slick_five(".Banner002826","/uploadfiles/");//点击弹窗播放 banner不停止切换
-	  注：/uploadfiles/是置标路径 置标时候需要添加 只合成留空就可以
-	  -->
+  <div class="banner" style="background: url(images/newsBanner.jpg) no-repeat center center /cover transparent;">
   </div>
-  <!--Banner002826 end-->
+  <!--menu star-->
+  <div class="Menu003135">
+    <div class=" root-w-1400">
+      <section class="auto w_96  clearfix">
+        <div class="current fl">您现在的位置： <a href="index.html">首页</a> / <a href="CompanyNews.html">新闻中心</a>
+          / <span>公司新闻</span></div>
+        <nav class="nav-menu fr">
+          <ul class="ul clearfix">
 
-  <script>
-    $(".Floor002912 .tab a").bind("click", function () {
-      var index = $(this).index();
-      $(this).parents(".Floor002912").find(".tab a").removeClass("on");
-      $(this).addClass("on");
-      $(this).parents(".Floor002912").find(".slider").addClass("hide");
-      $(this).parents(".Floor002912").find(".slider").eq(index).removeClass("hide")
-    });
-    $(".Floor002912 .tab a").eq(0).click()
-
-    $(".Floor002912 .slider .ul").slick({
-      slidesToShow: 3,
-      appendArrows: $(".Floor002912 .slider .btn"),
-      responsive: [
-        { breakpoint: 1200, settings: { slidesToShow: 3 } },
-        { breakpoint: 768, settings: { slidesToShow: 2 } },
-        { breakpoint: 640, settings: { slidesToShow: 1 } }
-      ]
-    });
-
-    $("#ProBtn").jqSearch({
-      TxtVal: "请输入产品型号",
-      KeyTxt1: "请输入产品型号搜索",
-      //KeyTxt2: "Do not enter too many keywords!",
-      //KeyTxt3: "There are special characters in the content you entered!",
-      KeyId: "ProKey", //输入框id
-      KeyUrl: "/ProductCenter/list.aspx", //跳转链接
-      KeyHref: "key", //链接传值
-      Static: false //是否静态站
-    });
-  </script>
-  <!--Floor002912 end-->
-  <!-- Floor002396 Start -->
-  <div class="Floor002396" data-role="part">
-    <div class="auto clearfix">
-      <div class="box box-why">
-        <div class="box-con">
-          <div class="bglogo"></div>
-          <div class="box-inner">
-            <div class="page-title">公司介绍</div>
-            <p>
-              上海虹翌智能科技有限公司成立于 2024 年 7 月，主营半导体领域全产业链自动搬运设备。产品现阶段应用领域为碳化硅衬底生产过程、碳化硅外延片生产过程、IDM
-              碳化硅器件生产过程、封装测试厂前道工艺。是一家集研发、制造、销售于一体的科技公司，领先全球 SIC 制成领域！
-            </p>
-            <ul class="ul clearfix">
-              <li>
-                <div class="counter">
-                  <b>5</b> <sub>年+</sub>
-                </div>
-                <span>行业累积</span>
-              </li>
-              <li>
-                <div class="counter">
-                  <b>300</b> <sub>+</sub>
-                </div>
-                <span>潜在客户</span>
-              </li>
-              <li>
-                <div class="counter">
-                  <b>4</b> <sub>+</sub>
-                </div>
-                <span>国家与地区</span>
-              </li>
-            </ul>
-            <div class="h-more">
-              <a href='About.html'>查看详情&nbsp;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="box box-about">
-        <div class="box-con">
-          <img src="images/company_image.jpg" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    $('.counter b').countUp({
-      delay: 50,
-      time: 3000
-    });
-  </script>
-  <div class="Floor002143" data-role="part" style="display: none;">
-    <div class="auto">
-      <aside class="click"></aside>
-      <aside class="pic"><img src="images/video_bg.jpg" /><img src="images/video_bg.jpg" class="phone" /></aside>
-      <aside class="file">
-      </aside>
-      <script>
-        $(".Floor002143 .click").click(function (e) {
-          $(".Floor002143 .file").show();
-          $(".Floor002143 .file").html('<video src="XXXXX" controls autoplay></video>');
-        });
-      </script>
-    </div>
-  </div>
-  <div class="Serviceadv inner-content">
-    <div class="auto auto_1600">
-      <div class="page-title">服务优势</div>
-      <div class="slick-load">
-        <div class="item">
-          <div class="icon">
-            <img src="images/sericon3.png">
-          </div>
-          <h2>产品优势</h2>
-          <h4>自有品牌</h4>
-          <p>交期快，品质好，性价高</p>
-        </div>
-
-        <div class="item">
-          <div class="icon">
-            <img src="images/sericon2.png">
-          </div>
-          <h2>技术优势</h2>
-          <h4>优秀的研发设计团队</h4>
-          <p>结合台湾及大陆高科技人才，20 年的经验</p>
-        </div>
-        <div class="item">
-          <div class="icon">
-            <img src="images/sericon1.png">
-          </div>
-          <h2>服务与支持</h2>
-          <h4>24 小时服务</h4>
-          <p>持续的技术支持，随时解答您的疑问</p>
-        </div>
-
-        <div class="item">
-          <div class="icon">
-            <img src="images/sericon4.png">
-          </div>
-          <h2>品质优势</h2>
-          <h4>质量保障</h4>
-          <p>值得信任的长期合作伙伴</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <script>
-    $(function () {
-      $(".Serviceadv .slick-load").slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
-        speed: 500,
-        infinite: true,
-        slidesToShow: 3,
-        dots: false,
-        arrows: true,
-        responsive: [
-          { breakpoint: 1025, settings: { slidesToShow: 2 } },
-          { breakpoint: 641, settings: { slidesToShow: 1 } }
-        ]
-      });
-    });
-  </script>
-  <div class="Floor003105 inner-content">
-    <div class="page-title">产品中心</div>
-    <div class="slider">
-      <ul class="ul">
-        <li>
-          <a class="ytable" href='Product.html'>
-            <div class="ytable-cell pic">
-              <img src="images/floor1.png" class="img-block">
-            </div>
-            <div class="ytable-cell txt">
-              <aside class="dot2 tit">晶圆选别机 (HY-W001 )</aside>
-              <p>实现 6 寸晶圆盒与 8 寸晶圆盒共用设备，节约设备开支，一机二用。
-                <br>
-                只需要更换晶圆盒，无需要调整。
-              </p>
-              <span class="more">了解详情</span>
-            </div>
-          </a>
-        </li>
-
-        <!-- <li>
-          <a class="ytable" href='javascript:'>
-            <div class="ytable-cell pic">
-              <img src="images/floor1.png" class="img-block">
-            </div>
-            <div class="ytable-cell txt">
-              <aside class="dot2 tit">工业控制</aside>
-              <p class="dot3">持续关注前沿技术及应用领域发展趋势，全面推动产品升级迭代，提高功率器件产业化及服务闭环的能力，为客户提供可持续、全方位、差异化的一站式产品解决方案</p>
-              <span class="more">了解详情</span>
-            </div>
-          </a>
-        </li> -->
-
-        <!-- <li>
-          <a class="ytable" href='javascript:'>
-            <div class="ytable-cell pic">
-              <img src="images/floor3.jpg" class="img-block">
-            </div>
-            <div class="ytable-cell txt">
-              <aside class="dot2 tit">消费电子</aside>
-              <p class="dot3">持续关注前沿技术及应用领域发展趋势，全面推动产品升级迭代，提高功率器件产业化及服务闭环的能力，为客户提供可持续、全方位、差异化的一站式产品解决方案</p>
-              <span class="more">了解详情</span>
-            </div>
-          </a>
-        </li> -->
-
-        <!-- <li>
-          <a class="ytable" href='javascript:'>
-            <div class="ytable-cell pic">
-              <img src="images/floor4.jpg" class="img-block">
-            </div>
-            <div class="ytable-cell txt">
-              <aside class="dot2 tit">通信</aside>
-              <p class="dot3">持续关注前沿技术及应用领域发展趋势，全面推动产品升级迭代，提高功率器件产业化及服务闭环的能力，为客户提供可持续、全方位、差异化的一站式产品解决方案</p>
-              <span class="more">了解详情</span>
-            </div>
-          </a>
-        </li> -->
-
-        <!-- <li>
-          <a class="ytable" href='javascript:'>
-            <div class="ytable-cell pic">
-              <img src="images/floor5.jpg" class="img-block">
-            </div>
-            <div class="ytable-cell txt">
-              <aside class="dot2 tit">家电</aside>
-              <p class="dot3">持续关注前沿技术及应用领域发展趋势，全面推动产品升级迭代，提高功率器件产业化及服务闭环的能力，为客户提供可持续、全方位、差异化的一站式产品解决方案</p>
-              <span class="more">了解详情</span>
-            </div>
-          </a>
-        </li> -->
-
-      </ul>
+            <li id="navv17"><a href='CompanyNews.html'>公司新闻</a></li>
+            <li id="navv18"><a href='IndustryNews.html'>行业新闻</a></li>
+            <li id="navv19"><a href='E-Encyclopedia.html'>电子百科</a></li>
+          </ul>
+        </nav>
+      </section>
     </div>
   </div>
   <script>
-    // $('.Floor003105 .slider .ul').slick({
-    //   slidesToShow: 1,
-    //   centerMode: true,
-    //   centerPadding: 0
-    // });
+    var navv = '';
+    if (navv != "") {
+      $("#navv").addClass("aon");
+    } else {
+      $("#navv17").addClass("aon");
+    }
   </script>
 
+  <!--menu end-->
   <div class="Floor002891 inner-content">
     <div class="auto">
       <div class="page-title">新闻中心</div>
