@@ -168,12 +168,12 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 }
 
 /*
- .Floor002396 涓篸emo缂栧彿
+
  */
 .Floor002396{ background:#f0f2f8;padding-bottom:5%;padding-top:9%;}
 .Floor002396 .auto{ max-width: 1600px; margin: 0 auto; background: #fff;}
 @media only screen and (max-width:1470px ) {
-	.Floor002396{ padding-left: 15px; padding-right: 15px;}
+
 }
 .Floor002396 .box{ float: left; width: 50%; }
 .Floor002396 .box .box-con{padding-bottom: 30px;}
@@ -191,7 +191,6 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 .Floor002396 .box figure{ font-size: 22px; line-height: 34px; color: #313131; overflow: hidden; margin: 0 0 25px;}
 .Floor002396 .box-why{ padding-bottom: 64px; }
 .Floor002396 .box-why .box-inner ul{ padding-top: 20px;}
-.Floor002396 .box-why ul{ margin: 0 -2%;}
 .Floor002396 .box-why ul li{margin-right:12%;}
 .Floor002396 .box-why ul li:nth-child(4){}
 .Floor002396 .box-why ul li .counter{font-weight: bold;color:#132f3d;position: relative;}
@@ -226,14 +225,13 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 	.Floor002396 .box-about .box-inner ul{ margin: 0 -2%;}
 	.Floor002396 .box-about ul li{ padding: 0 2%;}
 	.Floor002396 .box-about ul li dl{ width: 70px; height: 70px; padding: 10px 0;}
-	
-	.Floor002396 .box-about .box-con{ padding-bottom: 0;}
 }
 @media only screen and (max-width:991px ) {
 	.Floor002396 .box .bglogo{ height: 75px;}
 	.Floor002396 .box-about ul li dl{ width: 60px; height: 60px; padding: 5px 0;}	
 }
 @media only screen and (max-width:767px ) {
+	.Floor002396{padding-bottom: 0;padding-top: 0;overflow: hidden;}
 	.Floor002396 .box{ float: none; width: 100%;}
 	.Floor002396 .box .bglogo{ height: 50px;}
 	.Floor002396 .box .box-inner{padding:0 15px;}
