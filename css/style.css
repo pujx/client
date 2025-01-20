@@ -16,19 +16,22 @@ body,h1,h2,h3,h4,h5{font-family:'HarmonyOS_Sans_SC_Regular',"微软雅黑","Muli
 .Top002490 .header-menu li.aon em a:after{content:'';width: 46px;height: 3px;background: #fff;display: block;margin:0 auto;margin-top:0px;}
 .Top002490 .header-menu li .sub{ overflow: inherit;width: 190px; margin-left: -95px;}
 .Top002490 .header-menu li .sub dl{padding:0;background: rgba(0,0,0,1);}
-.Top002490 .header-menu li .sub dt{background: rgba(255,255,255,0.25);margin-bottom:1px;padding: 0; position:relative}
+.Top002490 .header-menu li .sub dt{margin-bottom:1px;padding: 0; position:relative}
 .Top002490 .header-menu li .sub dt a{color:#fff;font-size: 16px;line-height:40px}
 .Top002490 .header-menu li .sub dt.on >a,
 .Top002490 .header-menu li .sub dt a:hover{background:rgba(0,0,0,0.5)}
 .Top002490 .header-menu li .sub dt .nav{ position:absolute; left:190px; top:0;width:190px; padding-left:1px; display:none; background-color:#000;}
-.Top002490 .header-menu li .sub dt .nav a{background: rgba(255,255,255,0.25);margin-bottom:1px;}
-.Top002490 .header-menu li .sub dt .nav a:hover{background:#132f3d}
+.Top002490 .header-menu li .sub dt .nav a{margin-bottom:1px;}
+.Top002490 .header-menu li .sub dt .nav a:hover{background:rgba(0, 0, 0, 0.4)}
 .Top002490.hover .header-menu li .sub dt{background: rgba(0,0,0,0.2)}
 @media(min-width:992px){
 .Top002490 .header{display:table; width:100%;max-width: 1600px;  border-radius:5px;}
 .Top002490 .header > *{ display:table-cell; vertical-align:middle;}
 .Top002490 .header-mid{ width:57%;}
 .Top002490 .header-right{ position:relative; width:21.5%;}
+}
+@media screen and (min-width:992px) and (max-width:1023px) {
+	.Top002490 .top-language{width: 120px;}
 }
 @media(max-width:1600px){
 	.Top002490 .header{ padding:0 3%;}
@@ -54,7 +57,7 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 .Top002490 .top-shop{ padding:0 10px 0 0 ;}
 .Top002490 .top-shop .icon{ display: block; width: 28px;height: 28px;background: url(../images/shop.png) no-repeat center center;background-size:auto 24px;}
 
-@media(max-width:991px){
+@media(max-width:1023px){
 .Top002490{    position: absolute;
     padding-top: 12px;
     left: 0;
@@ -95,15 +98,27 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 .Banner002826 li.slick-slide video{position: absolute; z-index: 10; left: 50%; top: 50%; transform: translate(-50%,-50%);min-height: 100%; min-width: 100%;}
 .Banner002826 .info{position: absolute; width: 100%; padding:0 3%; top:40%; transform: translateY(-50%); color: #fff; transition: 0.5s}
 .Banner002826 .info .txt{max-width: 1600px;}
-.Banner002826 .info h3{font-size: 42px;}
-.Banner002826 .info p{font-size: 20px;}
+.Banner002826 .info h3{font-size: 60px;font-weight: bold;line-height: 1.5;}
+.Banner002826 .info p{font-size:32px;margin-top: 30px;}
 .Banner002826 li.slick-slide.slick-current .info{ top: 50%}
 @media(min-width:992px){
 .Banner002826  li.slick-slide img.wap{display: none;}
 }
-@media(max-width:991px){
-	.Banner002826 .info h3{font-size: 20px;}
+@media screen and (min-width:992px)  and (max-width:1366px){
+	.Banner002826 .info h3{font-size: 42px;}
+	.Banner002826 .info p{font-size: 24px;}
+}
+@media screen and (min-width:768px)  and (max-width:991px){
+	.Banner002826 .info h3{font-size: 24px;}
 	.Banner002826 .info p{font-size: 16px;margin: 15px 0 0 0;}
+}
+
+@media(max-width:767px){
+	
+	.Banner002826 .info h3{font-size:18px;line-height: 1.2;}
+	.Banner002826 .info p{font-size: 14px;margin: 15px 0 0 0;}
+}
+@media(max-width:991px){
 .Banner002826  li.slick-slide img.pc{display: none;}
 .Banner002826  li.slick-slide video{left: -100%;top: 100%; opacity: 0;}
 .Banner002826  li.slick-slide .open-video{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3) url(../images/Banner_play.png) no-repeat center center;background-size: auto 50px; z-index: 20;}
@@ -145,7 +160,7 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 /* .banner{position: relative}
 .banner .info{position: absolute; width: 100%;top:50%; padding:0 3%; transform: translateY(-50%); color: #fff; transition: 0.5s}
 .banner .info .txt{max-width: 1600px;font-size:  1.5625vw} */
-.banner{height: 380px;}
+.banner{height: 450px;}
 
 
 @media screen and (max-width:991px) {
@@ -177,15 +192,14 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 .Floor002396 .box-why{ padding-bottom: 64px; }
 .Floor002396 .box-why .box-inner ul{ padding-top: 20px;}
 .Floor002396 .box-why ul{ margin: 0 -2%;}
-.Floor002396 .box-why ul li{ float: left;margin-right:12%;}
+.Floor002396 .box-why ul li{margin-right:12%;}
 .Floor002396 .box-why ul li:nth-child(4){}
-.Floor002396 .box-why ul li .counter{font-size:50px;font-weight: bold;color:#132f3d;position: relative;}
+.Floor002396 .box-why ul li .counter{font-weight: bold;color:#132f3d;position: relative;}
+.Floor002396 .box-why ul li .counter b{font-size:50px;}
 .Floor002396 .box-why ul li .counter sup{font-size:26px;position: absolute;margin-left:6px;}
 .Floor002396 .box-why ul li .counter sub{position: absolute;
     font-size: 22px;
-    bottom: 24px;
-    margin-left: 3px;
-    min-width: 80px;}
+    bottom: 24px;}
 .Floor002396 .box-why ul li span{ display: block; font-size: 16px; color: #313131; margin-top: 1px;}
 .Floor002396 .box-about .box-con{position: relative;background: #fff;overflow: hidden;}
 .Floor002396 .box-about .box-con img{transition: all .5s;}
@@ -213,7 +227,7 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 	.Floor002396 .box-about ul li{ padding: 0 2%;}
 	.Floor002396 .box-about ul li dl{ width: 70px; height: 70px; padding: 10px 0;}
 	
-	.Floor002396 .box-about .box-con{ margin-top: 0;}
+	.Floor002396 .box-about .box-con{ padding-bottom: 0;}
 }
 @media only screen and (max-width:991px ) {
 	.Floor002396 .box .bglogo{ height: 75px;}
@@ -685,8 +699,8 @@ border-radius: 18px 0 18px 0; width:315px; padding:10px; margin-top:1px; display
 	.Floor002891 .tab-list ol{float: right;width: 50%; }
 	.Floor002891 .tab-list ol .Ispic{height: 510px;}
 	.Floor002891 .tab-list li:not(:last-child){margin-bottom:30px;} 
-	.Floor002891 .tab-list li a{width: 95%; max-width: 690px; }
-	.news-read-more a{margin-right: 20px;}
+	.Floor002891 .tab-list li a{    padding-right: 10%;}
+	.news-read-more a{margin-right: 5%;}
 	}
 	@media(min-width:1025px) and (max-width:1366px){
 	.Floor002891 .tab-list ol .Ispic{height: 413px;}
